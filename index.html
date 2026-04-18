@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lakshan's Playground</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Main Overlay / Header -->
+        <header class="main-header">
+            <button id="music-toggle" class="icon-btn">🎵</button>
+            <button id="sleep-toggle" class="icon-btn">🌙</button>
+        </header>
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="welcome-container">
+                <h1 class="welcome-title">HELLO LAKSHAN</h1>
+                <h2 class="welcome-subtitle">WELCOME BACK</h2>
+                <div class="nav-buttons">
+                    <button class="nav-btn play" onclick="navigateTo('play')">
+                        <span class="btn-icon">🎈</span>
+                        <span class="btn-text">PLAY</span>
+                    </button>
+                    <button class="nav-btn learn" onclick="navigateTo('learn')">
+                        <span class="btn-icon">📚</span>
+                        <span class="btn-text">LEARN</span>
+                    </button>
+                    <button class="nav-btn rhymes" onclick="navigateTo('rhymes')">
+                        <span class="btn-icon">🎵</span>
+                        <span class="btn-text">RHYMES</span>
+                    </button>
+                    <button class="nav-btn memories" onclick="navigateTo('memories')">
+                        <span class="btn-icon">❤️</span>
+                        <span class="btn-text">MEMORIES</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Play Section -->
+        <section id="play" class="section">
+            <button class="back-btn" onclick="navigateTo('home')">⬅️</button>
+            <h2 class="section-title">Play Time!</h2>
+            <div id="play-grid" class="grid-container">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- Learn Section -->
+        <section id="learn" class="section">
+            <button class="back-btn" onclick="navigateTo('home')">⬅️</button>
+            <h2 class="section-title">Let's Learn!</h2>
+            <div class="learn-nav">
+                <button onclick="showLearnCategory('abc')">A B C</button>
+                <button onclick="showLearnCategory('123')">1 2 3</button>
+                <button onclick="showLearnCategory('animals')">Animals</button>
+            </div>
+            <div id="learn-content" class="grid-container">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- Rhymes Section -->
+        <section id="rhymes" class="section">
+            <button class="back-btn" onclick="navigateTo('home')">⬅️</button>
+            <h2 class="section-title">Nursery Rhymes</h2>
+            <div id="rhymes-list" class="grid-container">
+                <!-- Rhyme cards go here -->
+            </div>
+            <div id="rhyme-player" class="rhyme-player hidden">
+                <div class="animation-stage" id="rhyme-anim"></div>
+                <div id="lyrics-display" class="lyrics-container"></div>
+                <div class="audio-controls">
+                    <button onclick="restartRhyme()">🔄</button>
+                    <button id="play-pause-btn" onclick="toggleRhyme()">⏸️</button>
+                    <button onclick="stopRhyme()">⏹️</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Section -->
+        <section id="memories" class="section">
+            <button class="back-btn" onclick="navigateTo('home')">⬅️</button>
+            <h2 class="section-title">Our Memories</h2>
+            <div id="memories-timeline" class="timeline">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- Sleep Mode Overlay -->
+        <div id="sleep-overlay" class="sleep-overlay hidden">
+            <div class="stars-container"></div>
+            <div class="sleep-msg">Shhh... Sleepy time... 😴</div>
+        </div>
+
+        <!-- Special Surprise Area (Hidden) -->
+        <div id="surprise-trigger" class="hidden-trigger"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

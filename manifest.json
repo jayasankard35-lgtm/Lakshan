@@ -1,0 +1,21 @@
+{
+  "name": "Lakshan's Playground",
+  "short_name": "LakshanPlay",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#e0f7fa",
+  "theme_color": "#e0f7fa",
+  "description": "A fun playground for Lakshan",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
